@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3, h4 {
+    color: #343a40;
+}
+
+hr {
+    border: 1px solid #dee2e6;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.add-btn {
+    background-color: #28a745;
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+.remove-btn {
+    background-color: #dc3545;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+.submit-btn {
+    background-color: #007bff;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Map Display */
+#map {
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+}
+
+/* Output Section */
+#output-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}

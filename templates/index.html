@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Route Optimization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Logistics Route Optimization</h2>
+
+
+        <!-- Warehouse Details Section -->
+<section id="warehouse-details-section">
+    <h3>Warehouse Details</h3>
+    
+    <div class="form-group">
+        <label for="warehouse-address">Address</label>
+        <input type="text" id="warehouse-address" placeholder="Enter Warehouse Address">
+    </div>
+    
+    <div class="form-group">
+        <label for="warehouse-pincode">Pincode</label>
+        <input type="text" id="warehouse-pincode" placeholder="Enter Pincode">
+    </div>
+    
+    <div class="form-group">
+        <label for="warehouse-region">Region</label>
+        <input type="text" id="warehouse-region" placeholder="Enter Region">
+    </div>
+    
+    <div class="form-group">
+        <label for="warehouse-state">State</label>
+        <input type="text" id="warehouse-state" placeholder="Enter State">
+    </div>
+    
+    <button id="submit-warehouse-btn" class="submit-btn">Save Warehouse Address</button>
+</section>
+
+        <!-- Vehicle Section -->
+        <div id="vehicle-details-section">
+            <h3>Vehicle Details</h3>
+            <div class="form-group">
+                <label for="vehicle-name">Vehicle Name</label>
+                <input type="text" id="vehicle-name" placeholder="Enter Vehicle Name">
+            </div>
+            <div class="form-group">
+                <label for="vehicle-type">Vehicle Type</label>
+                <select id="vehicle-type">
+                    <option value="bike">Bike</option>
+                    <option value="truck">Truck</option>
+                    <option value="van">Van</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fuel-efficiency">Fuel Efficiency (km/l)</label>
+                <input type="number" id="fuel-efficiency" placeholder="Enter Fuel Efficiency">
+            </div>
+            <div class="form-group">
+                <label for="carrying-capacity">Carrying Capacity (kg)</label>
+                <input type="number" id="carrying-capacity" placeholder="Enter Carrying Capacity">
+            </div>
+            <button id="add-vehicle-btn" class="add-btn">Add Vehicle</button>
+            <button id="remove-vehicle-btn" class="remove-btn">Remove Last Vehicle</button>
+        </div>
+
+        <hr>
+
+        <!-- Delivery Locations Section -->
+        <div id="delivery-locations-section">
+            <h3>Delivery Locations</h3>
+            <div class="form-group">
+                <label for="vehicle-selection">Select Vehicle</label>
+                <select id="vehicle-selection">
+                    <option value="">Select Vehicle</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Enter Address">
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" placeholder="Enter Pincode">
+            </div>
+            <div class="form-group">
+                <label for="region">Region</label>
+                <input type="text" id="region" placeholder="Enter Region">
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" placeholder="Enter Weight">
+            </div>
+            <div class="form-group">
+                <label for="priority">Priority</label>
+                <select id="priority">
+                    <option value="A">Light & Small (Special Handling)</option>
+                    <option value="B">Light & Small (Non-Special Handling)</option>
+                    <option value="C">Heavy & Large (Special Handling)</option>
+                    <option value="D">Heavy & Large (Non-Special Handling)</option>
+                </select>
+            </div>
+            <button id="add-location-btn" class="add-btn">Add Delivery Location</button>
+            <button id="remove-location-btn" class="remove-btn">Remove Last Location</button>
+        </div>
+
+        <hr>
+
+        <!-- Map Section -->
+        <div id="map-section">
+            <h3>View Delivery Route</h3>
+            <div id="vehicle-route-section">
+                <select id="select-vehicle-type">
+                    <option value="">Select Vehicle Type</option>
+                </select>
+                <select id="select-vehicle-name">
+                    <option value="">Select Vehicle Name</option>
+                </select>
+            <button class="submit-btn" id="view-route-btn">View Optimized Route</button>
+        </div>
+
+        <!-- Map Display -->
+        <div id="map" style="height: 400px; margin-top: 20px;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
+    </script>
+</body>
+</html>
